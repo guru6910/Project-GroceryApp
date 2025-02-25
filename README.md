@@ -39,6 +39,7 @@ mongoose.connect("mongodb://IPOfMongoDbServer:27017/grocerydb"
 ```
 apt update
 apt install npm -y
+npm install
 ```
 
 **install pm2 for daemon service running on server**
@@ -74,6 +75,7 @@ REACT_APP_API_URL=http://webserverpublicIP:5000
 ```
 apt update
 apt install npm -y
+npm install
 ```
 ```
 npm start
