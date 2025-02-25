@@ -1,33 +1,85 @@
-# GroceryAppFE 🚀  
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).  
+# Project GroceryApp
 
-## 📌 Getting Started  
-Follow these steps to set up and run the project locally.  
+## DATABASE
 
-### ✅ Prerequisites  
-Ensure you have the following installed on your system:  
-in .env file of frontend code make following changes :-
+**Install MongoDB from Following link**
+```
+https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/
+```
+```
+sudo apt-get install gnupg curl
+curl -fsSL https://www.mongodb.org/static/pgp/server-8.0.asc | \
+   sudo gpg -o /usr/share/keyrings/mongodb-server-8.0.gpg \
+   --dearmor
+echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-8.0.gpg ] https://repo.mongodb.org/apt/ubuntu noble/mongodb-org/8.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-8.0.list
+sudo apt-get update
+sudo apt-get install -y mongodb-org
+sudo systemctl start mongod
+```
+**Log into the Database**
+```
+mongosh
+```
+```
+use gracerydb;
+```
+```
+db.groceries.find()
+```
+**NOTE :** if you want to create mongodb server seprately ensure you enlist the mongodbserver ip in server.js files mentioned string if fe , be , db is in same server then do not change anything in the code.
+
+```
+// Connect to MongoDB
+mongoose.connect("mongodb://IPOfMongoDbServer:27017/grocerydb"
+```
+
+## Backend 
+
+**Install npm**
+```
+apt update
+apt install npm -y
+```
+
+**install pm2 for daemon service running on server**
+```
+npm install -g pm2
+```
+```
+pm2 start server.js --name grocery-backend
+```
+```
+pm2 save
+```
+```
+pm2 startup
+```
+```
+pm2 list
+```
+
+**run your backend using these commands in runtime but its mostly not needed**
+```
+npm init -y
+npm install express mongoose cors 
+node server.js
+```
+
+## Frontend
+**add the webserver ip in .env file**
 ```
 REACT_APP_API_URL=http://webserverpublicIP:5000
 ```
-- **[Node.js](https://nodejs.org/)** (LTS version recommended)  
-- **npm** (Comes with Node.js)  
-### install node js 
+**Install npm**
 ```
-curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
-sudo apt install -y nodejs
+apt update
+apt install npm -y
+```
+```
+npm start
 ```
 
-
-
-### 📥 Installation  
-1. **Clone the repository:**  
-   ```sh
-   git clone https://github.com/your-username/GroceryAppFE.git
-   cd GroceryAppFE
-   npm install
-   npm start
-### To build your frontend use following comman
+**HOSt**
 ```
-   npm run build //to build you fe
+IpofFrontendServer:3000
 ```
