@@ -33,7 +33,7 @@ db.groceries.find()
 mongoose.connect("mongodb://IPOfMongoDbServer:27017/grocerydb"
 ```
 
-### ${\color{green} \textbf{Backend}}$
+## ${\color{green} \textbf{Backend}}$
 
 **Install npm**
 ```
@@ -66,7 +66,7 @@ npm install express mongoose cors
 node server.js
 ```
 
-### ${\color{green} \textbf{Frontend}}$
+## ${\color{green} \textbf{Frontend}}$
 **add the webserver ip in .env file**
 ```
 REACT_APP_API_URL=http://webserverpublicIP:5000
