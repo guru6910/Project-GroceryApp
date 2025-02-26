@@ -75,13 +75,28 @@ REACT_APP_API_URL=http://webserverpublicIP:5000
 ```
 apt update
 apt install npm -y
-npm install
+npm install 
 ```
+**( if you want to host with npm)**
 ```
 npm start
+```
+**HOSt**
+```
+IpofFrontendServer:3000
+```
+**If You want to deploy Frontend on NGINX**
+
+**Build the code**
+```
+npm run build
+```
+**Copy all the data of build in the html Directory**
+```
+cp -r build/* /var/www/html
 ```
 
 **HOSt**
 ```
-IpofFrontendServer:3000
+IpofFrontendServer
 ```
