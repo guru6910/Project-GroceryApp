@@ -85,7 +85,7 @@ npm start
 ```
 IpofFrontendServer:3000
 ```
-**If You want to deploy Frontend on NGINX**
+**If You want to deploy Frontend on ${\color{green} \textbf{NGINX}}$**
 
 **Build the code**
 ```
