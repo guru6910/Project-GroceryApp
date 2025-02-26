@@ -1,6 +1,6 @@
 # $${\color{red} \textbf{Project GroceryApp}}$$
 
-## DATABASE
+## ${\color{green} \textbf{DATABASE}}$
 
 **Install MongoDB from Following link**
 ```
