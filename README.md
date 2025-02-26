@@ -1,4 +1,4 @@
-# Project GroceryApp
+# $${\color{red} \textbf{Project GroceryApp}}$$
 
 ## DATABASE
 
